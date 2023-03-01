@@ -1,12 +1,10 @@
 import java.util.LinkedList;
 import java.util.Scanner;
-
-public class LinkedOps {
+public class RemoveDuplicates {
     private int i = 0;
     private Integer num;
     private Scanner scr = new Scanner(System.in);
-    private LinkedList<Integer> ll = new LinkedList<Integer>();
-
+    private LinkedList<Integer> ll = new LinkedList<>();
     public void createLinkedList() {
         System.out.println("Creiamo la LinkedList: ");
         do {
@@ -19,16 +17,15 @@ public class LinkedOps {
         } while (num != -1);
         System.out.println(ll);
     }
-
     public void rimuoviElementiRipetuti() {
         System.out.println("Rimuoviamo ripetuti");
+        LinkedList<Integer> ll2 = new LinkedList<>();
         for (int prim = 0; prim < ll.size(); prim++) {
-            for (int resto=0; resto<ll.size(); resto++) {
-                if (prim<resto && ll.get(prim)==ll.get(resto)) {
-                    ll.remove(resto);
-                }
+            if (!ll2.contains(ll.get(prim))) {
+                ll2.add(ll.get(prim));
             }
         }
+        ll = ll2;
         System.out.println(ll);
     }
 }

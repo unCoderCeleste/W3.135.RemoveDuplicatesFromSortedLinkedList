@@ -1,4 +1,3 @@
-
 /*
 135. Write a Java program to remove duplicates from a sorted linked list.
 Original List with duplicate elements:
@@ -6,13 +5,12 @@ Original List with duplicate elements:
 After removing duplicates from the said list:
 12->13->14->15->16->17
 */
-import java.util.LinkedList;
-import java.util.Scanner;
-public class RemoveDuplicatesFromLinkedList {
+
+public class App {
     public static void main(String[] args) {
         System.out.println("REMOVE DUPLICATES FROM SORTED LINKED LIST");
 
-        LinkedOps lo = new LinkedOps();
+        RemoveDuplicates lo = new RemoveDuplicates();
         lo.createLinkedList();
         lo.rimuoviElementiRipetuti();
     }
